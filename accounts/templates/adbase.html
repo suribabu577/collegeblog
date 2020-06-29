@@ -1,0 +1,20 @@
+{% load static %}
+<nav class="nav nav-pills">
+    <a href="{% url 'newsfeed' %}" class="nav-item nav-link active">
+        <i class="fa fa-home"></i> Home
+    </a>
+    <a href="{% url 'add_student' %}" class="nav-item nav-link">
+        <i class="fa fa-user"></i> Addstudent
+    </a>
+    <a href="{% url 'add_staff' %}" class="nav-item nav-link">
+        <i class="fa fa-user"></i> AddStaff
+    </a>
+    <a href="{% url 'upload' %}" class="nav-item nav-link">
+        <i class="fa fa-envelope"></i> post
+    </a>
+    <a href="{% url 'logout' %}" class="nav-item nav-link disabled" tabindex="-1">
+        <i class="fa fa-line-chart"></i> logout
+    </a>
+</nav>
+{% block content %}
+{% endblock %}

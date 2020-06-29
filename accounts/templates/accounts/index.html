@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<html>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover({
+                placement : 'right'
+            });
+        });
+        </script>
+
+<center> <h1><i>welocome to home page</i></h1></head>
+
+<div class="box text-left" class="rounded">
+ <div class="card" style="max-width: 500px;">
+    <div class="row no-gutters">
+        <div class="col-sm-5" style="background: #868e96;">
+            <img src= "{% static 'c1.jpg' %}"class="card-img-top h-100" alt="...">
+        </div>
+        <div class="col-sm-7">
+            <div class="card-body">
+                <h5 class="card-title">college pics</h5>
+                <div class="bs-example">
+                    <div class="popover-demo mb-2">
+                        <button type="button" class="btn btn-primary" data-toggle="popover" title="colege details" data-content="Name:College  ">view details</button>
+                </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</center>
+</html>
+{% endblock %}

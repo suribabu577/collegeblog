@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>college website</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+	.bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="{% url 'index' %}" class="navbar-brand" ><i class="fa fa-home"></i></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="{% url 'management' %}" class="nav-link">Management</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"  data-toggle="dropdown">Branches</a>
+                    <div class="dropdown-menu">
+                        <a href="{% url 'cse' %}" class="dropdown-item">CSE</a>
+                        <a href="{% url 'ece' %}" class="dropdown-item">ECE</a>
+                        <a href="{% url 'civil' %}" class="dropdown-item">CIVIL</a>
+                        <a href="{% url 'mech' %}" class="dropdown-item">MECH</a>
+                        <a href="{% url 'eee' %}" class="dropdown-item">EEE</a>
+                        <a href="{% url 'it' %}" class="dropdown-item">IT</a>
+                        <!--<div class="dropdown-divider"></div>
+                        <a href="#"class="dropdown-item">Trash</a>-->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Staff</a>
+                    <div class="dropdown-menu">
+                        <a href="{% url 'hod' %}"class="dropdown-item">HOD</a>
+                        <a href="{% url 'af' %}" class="dropdown-item">Associative Profficers</a>
+                        <a href="{% url 'la' %}" class="dropdown-item">Lab Assistants</a>
+                        <!--<div class="dropdown-divider"></div>
+                        <a href="#"class="dropdown-item">Trash</a>-->
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"  data-toggle="dropdown">login</a>
+                    <div class="dropdown-menu">
+                        <a href="{% url 'admin' %}" class="dropdown-item" >Admin</a>
+                        <a href="{% url 'associats' %}" class="dropdown-item">Associats/staff</a>
+                        <a href="{% url 'students' %}" class="dropdown-item">Student</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</body>
+{% block content %}
+{% endblock%}
+</html>                            
+
